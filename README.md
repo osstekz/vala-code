@@ -1,7 +1,6 @@
 [![Contribute to Vala Code](https://img.shields.io/badge/help-donate-551A8B.svg)](https://www.paypal.me/GeorgeAslanis)
-[![Contribute to Vala Code](https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png)](https://www.paypal.me/GeorgeAslanis)
 
-# Introduction:
+## Introduction
 Vala-Code extends [VS Code](https://code.visualstudio.com/) with support for the
 [Vala](https://www.valadoc.org/) programming language, and provides tools for
 effectively editing, refactoring, running, and debugging vala apps.
