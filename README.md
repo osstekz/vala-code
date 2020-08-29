@@ -1,4 +1,4 @@
-[![Contribute to Vala Code](https://img.shields.io/badge/help-donate-551A8B.svg)](https://www.paypal.me/GeorgeAslanis)
+[![Contribute to Vala Code](https://img.shields.io/badge/help-donate-551A8B.svg)](https://www.paypal.me/GeorgeAslanis) 
 
 ## Introduction
 Vala-Code extends [VS Code](https://code.visualstudio.com/) with support for the
