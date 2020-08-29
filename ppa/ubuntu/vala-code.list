@@ -1,1 +1,1 @@
-deb https://osstekz.github.io/ppa ./
+deb https://raw.githubusercontent.com/osstekz/vala-code/master/ppa/ubuntu ./
