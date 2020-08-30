@@ -5,10 +5,10 @@ Essential: no
 Maintainer: George P. Aslanis <osstekz@gmail.com>
 Installed-Size: 16M
 Filename: ./vala-code-amd64.deb
-Size: 3726048
-MD5sum: df7bc9cd4fe24727b207a99d722b8afa
-SHA1: abdff05395bd0b0937bd4a401c289454ad5b1e2a
-SHA256: 29763ceb7652c1e42a34b5750644a72dd4a8d7cad5e3e64edd4cbd0af601a86a
+Size: 3729452
+MD5sum: 07f22640f99c71b941938d98e383d283
+SHA1: 230d5f6d989464c19eb4926776a95235d833539b
+SHA256: eda9419925a818161ac757e184c6ce5047d8da0a6a50a52845b952eacf7a2a5f
 Section: custom
 Priority: optional
 Description: Vala-Code developer tools
