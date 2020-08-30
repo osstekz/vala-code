@@ -1,0 +1,20 @@
+<ul>
+	<li {% if page.url == "/" %}class="current"{% endif %}><a href="/">Home</a></li>
+	<li {% if page.url contains "/docs/" %}class="current"{% endif %}><a href="/docs/">Docs</a></li>
+	<li {% if page.url contains "/faq/" %}class="current"{% endif %}><a href="/faq/">FAQ</a></li>
+	<li {% if page.url contains "/releases/" %}class="current"{% endif %}>
+		<a href="/releases/">Releases</a>
+		{% if page.url contains "/releases/" %}
+			{% assign releases = site.releases | sort: "sort_order" | reverse | slice: 0, 35 %}
+			{% include nav.html items=releases %}
+		{% endif %}
+	</li>
+</ul>
+<div class="gh-links">
+	<hr />
+	<ul>
+		<li><a href="https://github.com/vala-code/Dart-Code/issues/new?labels=is bug">Report bug</a></li>
+		<li><a href="https://github.com/vala-code/edit/master/{{ page.path }}">Edit page</a></li>
+		<li><a href="https://github.com/vala-code/issues/new?title=Issue on ({{ page.title | url_encode }})&body=I found an issue on {{ site.url | url_encode }}{{ page.url | url_encode }}&labels=in documentation %2F website">Issue with page?</a></li>
+	</ul>
+</div>
