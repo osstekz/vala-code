@@ -1,0 +1,494 @@
+---
+---
+
+$dart-blue-dark: #0081C6;
+$dart-blue-light: #00A4E4;
+$dart-green-dark: #00D2B8;
+$dart-green-light: #55DDCA;
+$vscode-accent-1: #1079C7;
+$vscode-accent-2: #CC6633;
+$vscode-background: #1E1E1E;
+$vscode-foreground: #D4D4D4;
+$pass: green;
+$fail: #f33;
+$skipped: orange;
+$unknown: darkorange;
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 1.6em;
+	margin: 0;
+	display: grid;
+	min-height: 100%;
+	grid-column-gap: 20px;
+	grid-template-rows: auto auto 1fr auto;
+	grid-template-columns: auto 120px 700px auto;
+	grid-template-areas:
+		". . header ."
+		"line line line line"
+		". nav main ."
+		"footer footer footer footer";
+}
+
+body.big-screen {
+	grid-template-columns: 50px auto 50px;
+	grid-template-areas:
+		". header ."
+		"line line line"
+		". main ."
+		"footer footer footer";
+	nav {
+		display: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2em;
+	margin-top: 25px;
+
+	em {
+		color: #999;
+		font-size: 50%;
+		font-style: normal;
+	}
+}
+
+p, pre {
+	margin: 20px 0;
+}
+
+header {
+	grid-area: header;
+	padding: 15px 0 10px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+
+	.title {
+		font-size: 65px;
+		line-height: 1em;
+		margin-left: -4px;
+	}
+
+	.imgs {
+		display: inline-block;
+		margin-left: 30px;
+		img {
+			vertical-align: middle;
+		}
+	}
+}
+
+.line {
+	grid-area: line;
+	border-bottom: 5px solid $dart-green-dark;
+
+	.inner {
+		border-bottom: 5px solid $dart-blue-dark;
+	}
+}
+
+nav {
+	grid-area: nav;
+	margin-top: 20px;
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		a {
+			padding-left: 6px;
+			display: block;
+		}
+
+		.current > a {
+			background-color: $dart-blue-dark;
+			color: #fff;
+		}
+
+		ul {
+			padding-left: 15px;
+
+			.current a {
+				background-color: $dart-green-dark;
+			}
+		}
+	}
+}
+
+main {
+	grid-area: main;
+
+	code {
+		font-family: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
+		font-size: 12px;
+		background-color: #e6e6e6;
+		border-radius: 3px;
+		padding: 0.1em 0.4em;
+	}
+
+	pre.highlight {
+		background-color: $vscode-background;
+		color: $vscode-foreground;
+		font-size: 12px;
+		line-height: 1.5em;
+		padding: 15px;
+		tab-size: 4;
+		max-width: 680px;
+		white-space: pre-wrap;
+
+		code {
+			background-color: inherit;
+			padding: 0;
+		}
+	}
+
+	.language-dart pre.highlight {
+		tab-size: 2;
+	}
+
+	& > :not(aside) {
+		pre.highlight, img:not(.x) {
+			box-shadow: 2px 2px 5px #999999;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.callout {
+		border: 1px solid #eeeeee;
+		padding: 15px 20px;
+		position: relative;
+		max-width: 648px;
+
+		// This is to get the full bar without the corners merging into the border
+		&:before {
+			content: "";
+			width: 5px;
+			background-color: $dart-blue-dark;
+			position: absolute;
+			top: -1px;
+			left: -1px;
+			bottom: -1px;
+		}
+		// This is a bit hacky, but can't get Kramdown to apply
+		// classes to multiple elements in one go ¯\_(ツ)_/¯
+		&.title {
+			margin-bottom: 0;
+			border-bottom-width: 0;
+			border-bottom-left-radius: 0;
+			padding-bottom: 0;
+			color: $dart-blue-dark;
+		}
+		&.body {
+			margin-top: 0;
+			border-top-width: 0;
+			border-top-left-radius: 0;
+		}
+	}
+
+	:target {
+		background-color: $dart-green-light;
+		margin-left: -8px;
+		padding: 5px 5px 5px 8px;
+	}
+
+	ul {
+		padding-left: 16px;
+	}
+
+	h1,h2,h3,h4,h5.h6 {
+		a {
+			display: none;
+			margin-left: 5px;
+			color: #ccc;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		&:hover a {
+			display: inline;
+		}
+		&:target a {
+			color: $dart-blue-dark;
+		}
+	}
+
+	#test-results-warnings {
+		background-color: #ffcc00;
+		margin-bottom: 20px;
+		padding: 10px;
+		border-radius: 5px;
+	}
+
+	#test-results {
+		min-width: 100%;
+
+		tr:hover .test-name {
+			background-color: $dart-green-light;
+		}
+
+		.suite {
+			text-transform: capitalize;
+			font-weight: bold;
+
+			td {
+				padding-top: 10px;
+			}
+		}
+
+		.test-name {
+			padding: 1px 3px;
+		}
+
+		img {
+			width: 16px;
+			height: 16px;
+		}
+
+		th {
+			text-align: left;
+			padding-bottom: 3px;
+
+			&.h {
+				text-align: center;
+			}
+
+			&.r {
+				width: 18px;
+				height: 18px;
+			}
+
+			&.i {
+				width: 20px;
+			}
+
+			&.pass {
+				border-bottom: 3px solid $pass;
+			}
+			&.fail {
+				border-bottom: 3px solid $fail;
+			}
+		}
+		td {
+			empty-cells: show;
+			max-width: 100px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+
+			&.pass {
+				background-color: $pass;
+			}
+			&.unknown {
+				background-color: $unknown;
+				color: #666;
+				text-align: center;
+				position: relative;
+				&:after {
+					content: "?";
+					pointer-events: none;
+					position: absolute;
+					width: 20px;
+					height: 20px;
+					top: 0;
+					left: 0;
+					line-height: 20px;
+					text-align: center;
+				}
+				opacity: 0.2;
+			}
+			&.skipped {
+				background-color: $skipped;
+			}
+			&.fail {
+				background-color: $fail;
+			}
+			a {
+				display: block;
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
+
+	.buttons {
+		text-align: center;
+	}
+
+	.download-box {
+		border: 1px solid #ccc;
+		width: 160px;
+		padding: 10px;
+		display: inline-block;
+		text-align: center;
+		color: #666;
+		font-size: 12px;
+		line-height: 1.6em;
+		margin: 0 10px 10px;
+
+		&:hover {
+			text-decoration: none;
+			background-color: #eee;
+		}
+
+		.name {
+			display: block;
+			font-weight: bold;
+			font-size: 15px;
+			line-height: 1.6em;
+			color: black;
+		}
+	}
+
+	.logo {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 100px;
+		margin-bottom: 10px;
+		display: block;
+		&.dart-logo {
+			background-image: url("../images/dart.svg");
+		}
+		&.flutter-logo {
+			background-image: url("../images/flutter.svg");
+		}
+	}
+}
+
+.test-results-page {
+	ul {
+		padding: 0;
+	}
+	li {
+		list-style: none;
+		padding: 5px 0;
+		position: relative;
+		line-height: 20px;
+		.badges {
+			text-align: right;
+			position: absolute;
+			width: 500px;
+			left: -505px;
+			img {
+				box-shadow: none;
+				vertical-align: middle;
+				margin-left: 5px;
+			}
+		}
+		span {
+			margin-left: 5px;
+			color: #666;
+
+			&.today {
+				font-weight: bold;
+			}
+
+			&.days-ago:after {
+				content: " days ago";
+			}
+		}
+	}
+}
+
+footer {
+	grid-area: footer;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	margin-top: 35px;
+
+	a {
+		color: #eee;
+		margin: 0 10px;
+	}
+}
+
+hr {
+	background-color: $dart-green-dark;
+	border: 0;
+	height: 1px;
+	margin: 25px 25%;
+}
+
+a {
+	color: #0366d6;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.loading {
+	display: inline-block;
+	border: 3px solid $dart-green-light;
+	border-top: 3px solid $dart-blue-dark;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.hide {
+	display: none;
+}
+
+@media all and (max-width: 900px) {
+	body {
+		margin: 10px 10px 0;
+		grid-template-rows: auto auto auto 1fr auto;
+		grid-template-columns: auto;
+		grid-template-areas:
+			"header"
+			"line"
+			"nav"
+			"main"
+			"footer";
+	}
+
+	header {
+		.title {
+			font-size: 45px;
+		}
+	}
+
+	nav {
+		margin-top: 0;
+
+		ul {
+			display: inline-block;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				padding: 0;
+				margin: 0;
+
+				a {
+					margin: 0;
+					padding: 0 5px;
+				}
+			}
+
+			ul {
+				/* Hide sub-navs on mobile */
+				display: none;
+			}
+		}
+	}
+
+	.gh-links {
+		display: none;
+	}
+}
