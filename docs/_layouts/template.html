@@ -1,12 +1,12 @@
 <html>
 <head>
 	<title>{% if page.title != "" %}{{ page.title | escape }} - {% endif %}{{ site.name }} - {{ site.desc }}</title>
-	<link rel="stylesheet" href="css/main.css" />
-	<link rel="stylesheet" href="css/code.css" />
+	<link rel="stylesheet" href="{ site.url }/css/main.css" />
+	<link rel="stylesheet" href="{ site.url }/css/code.css" />
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="images/favicon.ico" rel="shortcut icon">		
-	<script async src="js/main.js"></script>	
+	<link href="{ site.url }/images/favicon.ico" rel="shortcut icon">		
+	<script async src="{ site.url }/js/main.js"></script>	
 </head>
 <body class="{{page.body-class}}">
 	<header>
