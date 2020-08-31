@@ -1,6 +1,6 @@
 name: Vala Code
 desc: Vala support for Visual Studio Code
-permalink: :name/
+permalink: /:name/
 excerpt_separator: ""
 exclude:
   - pubspec.yaml
@@ -8,10 +8,10 @@ exclude:
 collections:
   docs:
     output: true
-    permalink: docs/:name/
+    permalink: /docs/:name/
   releases:
     output: true
-    permalink: releases/:name/
+    permalink: /releases/:name/
 defaults:
   - scope:
       path: ""
