@@ -1,12 +1,20 @@
 <html>
 <head>
 	<title>{% if page.title != "" %}{{ page.title | escape }} - {% endif %}{{ site.name }} - {{ site.desc }}</title>
-	<link rel="stylesheet" href="/css/main.css" />
-	<link rel="stylesheet" href="/css/code.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/code.css" />
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="/images/favicon.ico" rel="shortcut icon">	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2201586-26"></script>
 	<script async src="js/main.js"></script>	
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-2201586-26');
+	</script>
+
 </head>
 <body class="{{page.body-class}}">
 	<header>
