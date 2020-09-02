@@ -6,7 +6,7 @@ Vala-Code extends [VS Code](https://code.visualstudio.com/) with support for the
 effectively editing, refactoring, running, and debugging vala apps.
 
 ## Contribute your knowledge and experience:
-- Update the [Github wiki](https://github.com/osstekz/vala-code/wiki) documentation section
+- Update the [Vala-Code Website](https://github.com/osstekz/vala-code-web) documentation section
 - Submit code snippets.
 
 ## Raising Issues in Vala-Code
