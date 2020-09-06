@@ -6,10 +6,13 @@ Vala-Code extends [VS Code](https://code.visualstudio.com/) with support for the
 effectively editing, refactoring, running, and debugging vala apps.
 
 ## Installation
-Vala-Code can be installed using your local pakaging system.  Step-by-step instructions are located in the [ppa folder](https://github.com/osstekz/vala-code/tree/master/ppa). You must have [the VS Code Editor](https://code.visualstudio.com/) in order to run the Vala-Code extension.
+Vala-Code can be installed using your local packaging system, [see instructions](https://github.com/osstekz/vala-code.git/tree/master/ppa).
+    sudo apt install vala-code
 
 ## Contribute your knowledge and experience:
-- Submit additions/changes to the [Vala-Code Website](https://github.com/osstekz/vala-code-web) to help others with startup and usage. 
+This project welcomes contributions and suggestions. 
+- Install the package and keep us informed on your progress. Let us know how to make it better and promote the Vala language.
+- Submit additions/changes to the [Vala-Code Website](https://github.com/osstekz/vala-code-web).  This is a big step forward in helping others with their startup and usage experience.
 
 ## Raising Issues in Vala-Code
 If you've found an issue or have a suggestion for Vala-Code, please do [open an issue](https://github.com/osstekz/vala-code/issues).
@@ -17,3 +20,4 @@ If you've found an issue or have a suggestion for Vala-Code, please do [open an 
 ## Vala Language useful links
 - Vala's Official Page: https://wiki.gnome.org/Projects/Vala
 - Valadoc: http://www.valadoc.org/
+

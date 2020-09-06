@@ -1,14 +1,14 @@
 Package: vala-code
-Version: 0.2.1+build.242
+Version: 0.2.1+build.249
 Architecture: amd64
 Essential: no
 Maintainer: George P. Aslanis <osstekz@gmail.com>
 Installed-Size: 16M
 Filename: ./vala-code-amd64.deb
-Size: 3728524
-MD5sum: ede5d848e0e81321fee4be935292e06c
-SHA1: d0a35d16d1dd7f5ae1832b733096395bcf01acde
-SHA256: b65d863923354f864ee77c698035e00cf8f31a66d3c88743c121f15bdbb8aff1
+Size: 3625676
+MD5sum: bfebc1e50d992b62a5d0619542f3d42c
+SHA1: 98fdf74b5edaab4d65c0192e641e6fb29dd4baef
+SHA256: a0d0e233b14ddf94cda5508f563b7a9c7716483d415175a9c21199bc1acb5085
 Section: custom
 Priority: optional
 Description: Vala-Code developer tools

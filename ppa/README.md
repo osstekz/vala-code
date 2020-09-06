@@ -9,4 +9,4 @@ vala-code-amd64.deb
 ##### Step 2. Install a package:
     sudo apt install vala-code
 
-That's it! Your packaging manager will automatically notify you of updates.
+\nThat's it! Your packaging manager will automatically notify you of updates.
