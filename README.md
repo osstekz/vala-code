@@ -6,7 +6,7 @@ Vala-Code extends [VS Code](https://code.visualstudio.com/) with support for the
 effectively editing, refactoring, running, and debugging vala apps.
 
 ## Installation
-Vala-Code can be installed using your local packaging system, [see instructions](https://github.com/osstekz/vala-code.git/tree/master/ppa).
+Vala-Code can be installed using your local packaging system, [see instructions](https://github.com/osstekz/vala-code/tree/master/ppa).
     sudo apt install vala-code
 
 ## Contribute your knowledge and experience:
